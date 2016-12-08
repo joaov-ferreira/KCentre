@@ -1,7 +1,7 @@
 import math
 import random
 import matplotlib.pyplot as plt
-import pylab
+#import pylab
 
 __author__ = 'ferreiraduar_joa'
 
@@ -37,6 +37,15 @@ def twoapprox(P, k):
     return C
 
 
+#def knapsack
+
+#def dominant
+
+
+#def generatePerlinNoise
+
+#
+
 def generateUniform(numberPoints):
     P = []
     dimension = 2
@@ -51,8 +60,30 @@ def generateUniform(numberPoints):
     return P
 
 
+
+def calcdists(Points):
+    
+    distances = []
+    
+    
+    for i in range(len(Points)):
+        for j in range(i+1,len(Points)):
+            p = []
+            p.append(dist(Points[i],Points[j]))
+            p.append(Points[i])
+            p.append(Points[j])
+    
+    distances.sort()
+
+    return distances
+
+
+
+
 def dist(a,b):
      return math.sqrt(sum( (a - b)**2 for a, b in zip(a, b)))
+
+
 
 
 def evaluate(P,C):
@@ -60,7 +91,8 @@ def evaluate(P,C):
     for i in P:
         distanceToCenter = []
         for j in C:
-            distanceToCenter.append(dist(i,j)) # get the individual distance to each center
+            # get the individual distance to each center
+            distanceToCenter.append(dist(i,j)) 
         distanceToCenter.sort()
         distances.append(distanceToCenter)
 
@@ -132,18 +164,15 @@ def performance_evaluation(a,b):
 
 def main():
 
-    k = 5
-    P = clusterGenerate(50,8,3,10)
-    C = twoapprox (P,k)
-    maxdistance =evaluate(P,C) 
+    P = generateUniform(4)
     
-    print(maxdistance)    
+    a = calcdists(P) 
     
-    plot(P,C,maxdistance)
-    
+    print(P)
+    print(a)    
     return
-
-
+    
+    
     for k in range (1,50):
 
 
