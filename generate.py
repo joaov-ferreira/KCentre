@@ -3,6 +3,7 @@
 #######################################################################
 
 import random as pyrandom
+from evalu import dist
 
 # Generates random points with uniform distribution
 

@@ -13,4 +13,5 @@ def plot(P,C,maxdistance):
         circle = plt.Circle((i[0],i[1]),maxdistance,color='g', fill=False)
         ax.add_patch(circle)
 
+	plt.axis('equal')
     plt.show()

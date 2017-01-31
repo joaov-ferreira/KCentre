@@ -4,16 +4,19 @@ import sys
 from generate import *
 from solve import *
 from plot import *
-
+from evalu import *
 
 def main():
 
-    P = generateUniform(4)
+    #P = clusterGenerate(20,5,2,20)
     
-    a = calcdists(P) 
+    P = generateUniform(20)
     
-    print(P)
-    print(a)    
+    C = centerselection(P,5,10)
+    
+    m = evaluate(P,C)
+    plot(P,C, m)
+      
     return
     
     
