@@ -14,7 +14,7 @@ def generateUniform(numberPoints):
     for n in range(numberPoints):
         point = []
         for j in range(dimension):
-            point.append(pyrandom.randint(0,100))
+            point.append(pyrandom.randint(0,1000))
 
         P.append(point)
 
@@ -29,7 +29,7 @@ def generateUniform(numberPoints):
 #	mindistance			- Minimun distance between two clusters, default = 5
 #
 
-def clusterGenerate(N_Points,N_Clusters, offset,mindistance = 5):
+def clusterGenerate(N_Points,N_Clusters, offset,mindistance = 50):
     clusters = []
     points = []
     threshold = mindistance
@@ -38,7 +38,7 @@ def clusterGenerate(N_Points,N_Clusters, offset,mindistance = 5):
     while (i < N_Clusters):
         p = []
         for j in range(2):
-            p.append(pyrandom.randint(0+offset*2,100-offset*2))
+            p.append(pyrandom.randint(0+offset*2,1000-offset*2))
     
         if (i!=0):
             add = True

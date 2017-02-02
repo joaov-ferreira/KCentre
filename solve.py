@@ -36,7 +36,7 @@ def twoapprox(P, k):
                 reponse = i	# Select the fartest point to a center
 
         aux.remove(reponse)
-        C.append(reponse)	# And adds it to the center list
+        C.append(reponse)	
 
     return C
     
@@ -48,7 +48,7 @@ def centerselection (P,k, initialRadius = 20, step = 5):
 	solved = False
 	radius = initialRadius
 	
-	while (solved is False):
+	while (not solved):
 		C = []
 		selection = P[:]
 		
