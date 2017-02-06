@@ -15,3 +15,9 @@ def plot(P,C,maxdistance):
 
 	plt.axis('equal')
     plt.show()
+
+
+def lineplot(f):
+	plt.plot(f)
+	return
+	
